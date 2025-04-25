@@ -1,0 +1,820 @@
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de hover nos botões */
+.btn-whatsapp, .btn-agendar, .btn-aventura {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-whatsapp:hover, .btn-agendar:hover, .btn-aventura:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animação para Navbar ao rolar a página */
+.navbar {
+    transition: background-color 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.navbar.scrolled {    
+    padding: 0.625rem 0;
+}
+
+.navbar .nav-link i {
+    margin-left: 0.5rem;
+}
+
+/*.img-galeria {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color:  #03989d;*/
+        }
+
+/* Animação de entrada para imagens */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Animação para os itens de review */
+.review-box .col-md-3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.review-box .col-md-3.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(29, 151, 156, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.625rem 0;
+
+}
+
+.navbar-brand{
+    font-size: 2.37m5re;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-right: 0.938rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8b400;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha os elementos na parte inferior */
+    align-items: center;
+    height: 100vh; /* Garante que a altura da seção ocupe toda a tela */
+    padding: 0 1.25rem; /* Remover padding superior para alinhar corretamente */
+    background: url('../images/gal13.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero-text {
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    text-shadow: 
+        -2px -2px 0 #fff,  
+        2px -2px 0 #fff,  
+        -2px 2px 0 #fff,  
+        2px 2px 0 #fff,
+        4px 4px 8px rgba(0, 0, 0, 0.9),
+        10px 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.sub-text {
+    font-size: 2rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Botão */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background: #25d366;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.875rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1.25rem; /* Distância entre o texto e o botão */
+    position: relative; /* Torna possível ajustar a posição do botão sem afetar os outros elementos */
+    top: -25px; /* Move o botão 25px para cima */
+}
+
+.btn-whatsapp i {
+    margin-left: 0.625rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e; /* Cor de hover */
+    transition: 0.4s;
+}
+
+/* Seção Sobre Nós */
+.sobre-nos{
+    color: white;
+    background-color: #03989d;
+}
+
+.sobre-texto h2 {
+    font-size: 3.5rem; /* Ajuste o tamanho do título */
+    font-weight: 700;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; /* Espaço abaixo do título */
+}
+
+.sobre-texto p {
+    font-size: 1.4rem; /* Ajuste o tamanho do texto do parágrafo */
+    line-height: 1.6; /* Ajuste o espaçamento entre linhas */
+    margin-bottom: 0.938rem; /* Espaço abaixo de cada parágrafo */
+}
+
+
+
+.sobre-nos .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.sobre-texto, .sobre-imagem {
+    flex: 1;
+    min-width: 18.75rem;
+}
+
+.sobre-imagem img {
+   width: 100%;
+    max-width: 31.25rem; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 0.313rem; /* Bordas arredondadas */
+    border: 0.938rem solid white;
+    margin: 1.25rem 0;
+}
+
+.sobre-nos .sobre-texto {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.titulo{
+    text-align: center !important;
+}
+
+.sobre-nos h2 {
+    text-align: left; /* Centraliza o título */
+    width: 100%; /* Garante que o título ocupe toda a largura da coluna */
+    margin: 0 auto; /* Certifica que o título ficará centralizado */
+}
+
+.sobre-nos .btn-agendar {
+    text-align: center !important; /* Se desejar centralizar o botão também */
+}
+
+.btn-agendar{
+    display: inline-flex;
+    align-items: center;
+    background: #25d366;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.875rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1.25rem; /* Distância entre o texto e o botão */
+    position: relative; /* Torna possível ajustar a posição do botão sem afetar os outros elementos */
+    top: -25px; /* Move o botão 25px para cima */
+}
+
+.btn-agendar i {
+    margin-left: 0.625rem;
+}
+
+.btn-agendar:hover {
+    background-color: #128c7e; /* Cor de hover */
+    transition: 0.4s;
+}
+
+/* Seção Escolha sua Aventura */
+
+.titulo-aventura{
+    color: #03989d;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+}
+
+.escolha-aventura {
+    padding: 3.125rem 1.25;
+    background-color: #f4f4f4; /* Cor de fundo opcional */
+}
+
+.aventura-item {
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+    height: 100%; /* Garante que o contêiner tenha altura proporcional */
+}
+
+.img-aventura {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cubra toda a área do contêiner sem distorção */
+    display: block;
+    border-radius: 0.938rem;
+    border: 0.25rem solid #222; /* Borda de 4px quase preta */
+}
+
+.btn-aventura {
+    position: absolute;
+    bottom: 1.25rem; /* Coloca o botão 20px acima da parte inferior da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    background: #25d366;
+    color: white;
+    padding: rem 1.25rem;
+    border-radius: 1.875rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+    z-index: 10; /* Garante que o botão fique sobre a imagem */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao botão para destacá-lo */
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out; /* Mantenha a transição na classe base */
+}
+
+.btn-aventura:hover {
+    background-color: #128c7e; /* Cor de hover */
+    transform: translateX(-50%) scale(1.05); /* Evita deslocamento e adiciona leve efeito de zoom */
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem; /* Espaço entre as imagens */
+}
+
+.col-md-6 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18.75rem; /* Define uma altura fixa para as imagens */
+}
+
+.aventura-item {
+    width: 100%;
+    height: 100%; /* Garante que o item da aventura ocupe o máximo de altura possível */
+}
+
+
+/* Seção Reviews */
+
+.reviews-section .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.py-5{
+    background-color:  #03989d;
+}
+
+.reviews-section .col-md-3 {
+    flex: 0 0 24%; /* Faz com que cada coluna ocupe 24% da largura */
+    box-sizing: border-box; /* Garante que o padding e a borda não afetem o layout */
+}
+
+
+
+/* Seção Carousel */
+.sobre-imagem1{
+   
+    border-radius: 0.313rem; /* Bordas arredondadas */
+    border: 0.938rem solid white;
+    margin: 1.25rem 0;
+}
+
+@media (max-width: 768px) {
+    .sobre-esporte .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-esporte .sobre-texto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-esporte .titulo {
+        order: 1 !important;
+    }
+
+    .sobre-esporte .sobre-texto p {
+        order: 2 !important;
+    }
+
+    .sobre-esporte .sobre-imagem {
+        order: 3 !important;
+    }
+
+    .sobre-esporte .d-flex {
+        order: 2 !important;
+    }
+}
+
+
+.video-makani {
+    width: 100%; /* Faz o vídeo ocupar toda a largura da coluna */
+    max-width: 35rem; /* Mantém um limite máximo */
+    height: 19.688rem; /* Mantém a proporção do YouTube */
+    display: block;
+    margin: 0 auto; /* Centraliza dentro da div */
+    border-radius: 1.25rem;
+    top: -30px;
+}
+
+.video-section {
+    background-color: #03989d; /* Cor sólida */
+    padding: 3.125rem 0; /* Espaçamento opcional */
+    text-align: center;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #03989d;
+    color: white;
+    padding: 1.875rem 0;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+ @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    .animated-text {
+        animation: pulse 1.5s infinite;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+/* Links de redes sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* Espaçamento entre os ícones */
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #f8b400; /* Cor de hover */
+}
+
+.wakeboard {
+  background: url('../images/wake.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.wakeboard .overlay-text {
+  position: relative;
+  top: 10rem;
+}
+
+
+
+.hero-content h1{
+    font-weight: 500;
+    font-size: 5rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.wakeboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Escurece a imagem para melhor leitura do texto */
+}
+
+.sobre-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sobre-titulo,
+.sobre-texto,
+.sobre-imagem {
+  flex: 1 1 100%;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .sobre-wrapper {
+    flex-direction: row;
+  }
+
+  .sobre-titulo {
+    order: 1;
+    flex: 1 1 100%;
+  }
+
+  .sobre-texto {
+    order: 2;
+    flex: 1;
+  }
+
+  .sobre-imagem {
+    order: 3;
+    flex: 1;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  .sobre-wrapper {
+    flex-direction: column;
+  }
+
+  .sobre-titulo {
+    order: 1;
+    text-align: center;
+  }
+
+  .sobre-imagem {
+    order: 2;
+  }
+
+  .sobre-texto {
+    order: 3;
+    text-align: center;
+  }
+}
+
+.sobre-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sobre-conteudo,
+.sobre-imagem {
+  flex: 1;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .sobre-wrapper {
+    flex-direction: column;
+  }
+
+  .sobre-conteudo {
+    order: 1;
+    text-align: center;
+  }
+
+  .sobre-imagem {
+    order: 2;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .sobre-wrapper {
+    flex-direction: row;
+  }
+
+  .sobre-conteudo {
+    text-align: left;
+  }
+}
+
+.sobre-wrapper-experiencia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sobre-wrapper-experiencia .sobre-texto,
+.sobre-wrapper-experiencia .sobre-imagem {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .sobre-wrapper-experiencia {
+    flex-direction: column;
+  }
+
+  .sobre-wrapper-experiencia .sobre-texto {
+    order: 1;
+    text-align: center;
+  }
+
+  .sobre-wrapper-experiencia .sobre-imagem {
+    order: 2;
+  }
+
+  .sobre-wrapper-experiencia .btn-agendar {
+    order: 3;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sobre-wrapper-experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-wrapper-experiencia .sobre-texto {
+    order: 1;
+  }
+
+  .sobre-wrapper-experiencia .sobre-imagem {
+    order: 2;
+  }
+
+  .sobre-wrapper-experiencia .mt-3 {
+    order: 3;
+  }
+}
+
+
+/* Layout padrão (desktop) */
+.sobre-exclusiva .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsivo: inverter ordem no mobile */
+@media (max-width: 768px) {
+    .sobre-exclusiva .container {
+        flex-direction: column;
+    }
+
+    .sobre-exclusiva .sobre-texto {
+        order: 1; /* Título, texto e botão primeiro */
+    }
+
+    .sobre-exclusiva .sobre-imagem {
+        order: 2; /* Imagem depois */
+    }
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  transform: translateY(12.75rem);
+}
+
+.wake-info {
+  background-color: #03989d; /* Cor verde */
+  color: white;
+}
+
+.kitesurf-experience-section {
+    background-image: url('../images/kii.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Coloca o conteúdo no final da altura */
+    padding-bottom: 1.875rem;
+  }
+
+  .lista-destaque {
+    font-size: 1.5rem;
+}
+
+   .overlay-text h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 5rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  }
+
+  @media (max-width: 768px) {
+    .overlay-text h2 {
+        margin-bottom: -35px !important;
+      font-size: 4rem;
+    }
+  }
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.5rem; /* Reduz o tamanho do ícone em telas menores */
+    }
+
+    .hero-content h1{
+        font-size: 4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }     
+
+    .overlay-text h2 {
+       font-size: 4rem;
+    }    
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .hero-content h1{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }    
+
+    .overlay-text h2 {
+       font-size: 4rem;
+    } 
+
+    .sub-text {
+        font-size: 1.5  rem;
+    }
+
+     .row {
+        flex-direction: column; /* Coloca as imagens uma em cima da outra */
+        gap: 1.25rem; /* Espaçamento entre as imagens no modo coluna */
+    }
+
+    .col-md-6 {
+        width: 100%; /* As colunas ocupam 100% da largura no modo responsivo */
+        height: 25rem; /* Ajuste a altura para garantir que as imagens não fiquem muito pequenas */
+    }
+
+    .sobre-texto h2{
+        text-align: left;
+        font-size: 2.188rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 0.625rem;
+    }
+
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .hero-content h1{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }  
+
+    .sub-text {
+        font-size: 1.5rem;
+    }
+
+     .row {
+        flex-direction: column; /* Coloca as imagens uma em cima da outra */
+        gap: 1.25rem; /* Espaçamento entre as imagens no modo coluna */
+    }
+
+    .reviews-section .col-md-3 {
+        flex: 0 0 48%; /* Em telas menores, as colunas ocupam 48% */
+    }
+
+    .col-md-6 {
+        width: 100%; /* As colunas ocupam 100% da largura no modo responsivo */
+        height: 25rem; /* Ajuste a altura para garantir que as imagens não fiquem muito pequenas */
+    }
+
+    .sobre-texto h2{
+        text-align: left;
+        font-size: 2.188rem;
+    }
+
+    .overlay-text h2 {
+       font-size: 4rem;
+    } 
+}
+
+@media (max-width: 576px) {
+    .hero-text {
+        font-size: 4rem;
+    }
+    
+    .sub-text {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h1{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }  
+
+     .row {
+        flex-direction: column; /* Coloca as imagens uma em cima da outra */
+        gap: 1.25rem; /* Espaçamento entre as imagens no modo coluna */
+    }
+
+    .col-md-6 {
+        width: 100%; /* As colunas ocupam 100% da largura no modo responsivo */
+        height: 25rem; /* Ajuste a altura para garantir que as imagens não fiquem muito pequenas */
+    }
+
+    .reviews-section .col-md-3 {
+        flex: 0 0 100%; /* Em telas muito pequenas, cada coluna ocupa 100% */
+    }
+
+    .sobre-texto h2{
+        text-align: left;
+        font-size: 2.188rem;
+    }
+
+    .btn-agendar{
+        text-align: left;
+    }
+
+    .overlay-text h2 {
+       font-size: 4rem;
+    } 
+}
